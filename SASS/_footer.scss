@@ -1,0 +1,45 @@
+@import 'variables';
+footer {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 150px;
+  color: $primary;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 55px;
+  flex-wrap: wrap;
+  h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-family: sans-serif;
+  }
+  h3 {
+    text-transform: uppercase;
+    font-family: sans-serif;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 150px;
+    color: $primary;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 55px;
+    flex-wrap: wrap;
+    h2 {
+      font-size: 1rem;
+      text-transform: uppercase;
+      font-family: sans-serif;
+    }
+    h3 {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      font-family: sans-serif;
+    }
+  }
+}

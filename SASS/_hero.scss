@@ -1,0 +1,14 @@
+.hero {
+  height: 600px;
+  width: 100vw;
+  position: relative;
+
+  .hereImageSection {
+    width: 100vw;
+    height: 590px;
+    background-image: url('../images/pexels-narda-yescas-1566837.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}

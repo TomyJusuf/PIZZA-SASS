@@ -1,0 +1,220 @@
+@import 'variables';
+main {
+  margin: 0 150px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: start;
+  .info {
+    width: 100%;
+
+    h1 {
+      margin-bottom: 25px;
+      font-size: 3rem;
+      text-transform: uppercase;
+      font-family: sans-serif;
+      color: $primary;
+    }
+    p {
+      font-size: 1.1rem;
+      font-weight: bold;
+      font-family: sans-serif;
+    }
+  }
+  .infoImages {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 300px;
+    gap: 20px;
+  }
+  [class^='box-'] {
+    opacity: 0.5;
+    cursor: pointer;
+    transition: $hover;
+  }
+  [class^='box-']:hover {
+    opacity: 1;
+    transition: $hover;
+    transform: scale(1.2);
+    z-index: 10;
+    border: 5px solid black;
+    box-shadow: 7px -5px 0.9rem $box-shadow;
+  }
+  .box-1 {
+    background-image: url('../images/pexels-anna-tarazevich-6937415.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+  .box-2 {
+    background-image: url('../images/pexels-cottonbro-studio-3171766.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+  .box-3 {
+    background-image: url('../images/pexels-nataliya-vaitkevich-5792329.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+  .box-4 {
+    background-image: url('../images/pexels-vincent-rivaud-2471171.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+// MEDIA QUERY 1130px
+@media screen and (max-width: 1130px) {
+  main {
+    margin: 0 80px;
+
+    .infoImages {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+
+      gap: 10px;
+    }
+    .box-1 {
+      grid-column: 1 / span 1;
+      height: 250px;
+    }
+    .box-2 {
+      grid-column: 2 / span 5;
+      height: 250px;
+    }
+    .box-3 {
+      height: 250px;
+      grid-column: 1 / span 2;
+    }
+    .box-4 {
+      grid-column: 3 / span 4;
+      height: 250px;
+    }
+  }
+}
+
+// MEDIA QUERY 1000px
+
+@media screen and (max-width: 1000px) {
+  main {
+    margin: 0 50px;
+    .info {
+      margin: 50px 0 20px 0;
+    }
+    .infoImages {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+
+      gap: 10px;
+    }
+    .box-1 {
+      grid-column: 1 / span 2;
+      height: 250px;
+    }
+    .box-2 {
+      grid-column: 3 / span 5;
+      height: 250px;
+    }
+    .box-3 {
+      height: 250px;
+      grid-column: 1 / span 2;
+    }
+    .box-4 {
+      grid-column: 3 / span 5;
+      height: 250px;
+    }
+  }
+}
+
+// MEDIA QUERY 860px
+@media screen and (max-width: 860px) {
+  main {
+    margin: 0 50px;
+    .info {
+      width: 100%;
+
+      h1 {
+        margin-bottom: 25px;
+        font-size: 2rem;
+        text-transform: uppercase;
+        font-family: sans-serif;
+        color: $primary;
+      }
+      p {
+        font-size: 0.85rem;
+        font-weight: normal;
+        font-family: sans-serif;
+      }
+    }
+    .infoImages {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 10px;
+    }
+    .box-1 {
+      grid-column: 1 / span 2;
+      height: 250px;
+    }
+    .box-2 {
+      grid-column: 3 / span 5;
+      height: 250px;
+    }
+    .box-3 {
+      height: 250px;
+      grid-column: 1 / span 2;
+    }
+    .box-4 {
+      grid-column: 3 / span 5;
+      height: 250px;
+    }
+  }
+}
+
+// mMEDIA QUERY 650px
+@media screen and (max-width: 750px) {
+  main {
+    .info {
+      width: 100vw !important;
+      h1 {
+        text-align: center;
+      }
+      p {
+        padding: 0 25px;
+      }
+    }
+    .infoImages {
+      margin: 0 25px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+
+      gap: 10px;
+    }
+    .box-1 {
+      grid-column: 1 / span 5;
+      grid-row: 1 / span 2;
+      height: 250px;
+    }
+    .box-2 {
+      grid-column: 1 / span 5;
+      grid-row: 2 / span 1;
+      height: 250px;
+    }
+    .box-3 {
+      height: 250px;
+      grid-column: 1 / span 5;
+      grid-row: 3 / span 3;
+    }
+    .box-4 {
+      grid-column: 1 / span 5;
+      height: 250px;
+      grid-row: 4 / span 1;
+    }
+  }
+}
